@@ -32,8 +32,8 @@ public class ZooServiceImpl implements ZooService {
     }
 
     @Override
-    public List<Zoo> findByNameContaining(String zooname) {
-        return zoorepos.findByZoonameContaining(zooname);
+    public List<Zoo> findByNameContainingIgnoringCase(String zooname) {
+        return zoorepos.findByZoonameContainingIgnoringCase(zooname);
     }
 
     @Override

@@ -11,7 +11,7 @@ public interface ZooRepository extends CrudRepository<Zoo, Long> {
 
     Zoo findByZooname(String zooname);
 
-    List<Zoo> findByZoonameContaining(String zoonmae);
+    List<Zoo> findByZoonameContainingIgnoringCase(String zoonmae);
 
     @Query(value = "SELECT z.zooname as zoonamerpt, count(t.phoneid) as countphone FROM zoos z JOIN telephones t ON z.zooid = t.zooid GROUP BY z.zooname",
             nativeQuery = true)

@@ -9,7 +9,7 @@ public interface ZooService {
 
     List<Zoo> findAll();
 
-    List<Zoo> findByNameContaining(String zooname);
+    List<Zoo> findByNameContainingIgnoringCase(String zooname);
 
     Zoo findZooById(long id);
 

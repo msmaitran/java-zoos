@@ -27,10 +27,10 @@ public class ZooController {
         return new ResponseEntity<>(myZoos, HttpStatus.OK);
     }
 
-    @GetMapping(value = "/zoo/namelink/{name}",
+    @GetMapping(value = "/zoo/namelike/{name}",
                 produces = {"application/json"})
     public ResponseEntity<?> getZooByNameLike(@PathVariable String name) {
-        List<Zoo> myZoos = zooService.findByNameContaining(name);
+        List<Zoo> myZoos = zooService.findByNameContainingIgnoringCase(name);
         return new ResponseEntity<>(myZoos, HttpStatus.OK);
     }
 
