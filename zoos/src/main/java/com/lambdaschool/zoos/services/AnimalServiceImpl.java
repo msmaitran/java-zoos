@@ -37,7 +37,7 @@ public class AnimalServiceImpl implements AnimalService {
     public Animal save(Animal animal) {
         Animal newAnimal = new Animal();
         newAnimal.setAnimaltype(animal.getAnimaltype());
-        if (animal.getZooAnimals().size() > 0) throw new EntityNotFoundException("Animal not added!")
+        if (animal.getZooAnimals().size() > 0) throw new EntityNotFoundException("Animal not added!");
         return animalrepos.save(animal);
     }
 
